@@ -1,0 +1,583 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어(대한민국) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#include ""res\\SimpleMessangerClient.rc2""  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.\r\n"
+    "#include ""l.KOR\\afxres.rc""      // 표준 구성 요소\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SimpleMessangerClient.ico"
+
+IDR_SimpleMessangerTYPE ICON                    "res\\SimpleMessangerClientDoc.ico"
+
+IDI_SEARCH              ICON                    "res\\search-icon.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+IDB_STATE               BITMAP                  "res\\STATE.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "파일"
+    BEGIN
+        MENUITEM "끝내기(&X)",                     ID_APP_EXIT
+    END
+    POPUP "친구"
+    BEGIN
+        MENUITEM "친구 추가",                       ID_MENU_FRADD
+        MENUITEM "친구 삭제",                       ID_MENU_FRDELETE
+    END
+    POPUP "기능"
+    BEGIN
+        MENUITEM "쪽지 전송",                       ID_SENDMESSAGE
+        MENUITEM "대화 하기",                       ID_MENU_CHAT
+        MENUITEM "대화명 설정",                      ID_STATEMESSAGE
+        MENUITEM "사진 설정",                       ID_IMAGE
+        MENUITEM "파일 전송",                       ID_FILESEND
+    END
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "SimpleMessangerClient 정보(&A)...", ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SimpleMessangerClient 정보"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
+    LTEXT           "SimpleMessangerClient, 버전 3.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2016",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "확인",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_SIMPLEMESSANGERCLIENT_FORM DIALOGEX 0, 0, 186, 229
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_CHILD
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_LOGIN_ID,71,98,78,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LOGIN_PW,71,116,78,12,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "로그인",IDC_BUTTON_LOGIN,102,159,48,15
+    PUSHBUTTON      "회원가입",IDC_BUTTON_SIGNUP,38,159,54,15
+    LTEXT           "아이디",IDC_STATIC_LOGIN_ID,43,100,24,10
+    LTEXT           "비밀번호",IDC_STATIC_LOGIN_PW,40,118,28,10
+    PUSHBUTTON      "개발자 블로그 가기",IDC_BUTTON_BLOG,38,180,112,15
+END
+
+IDD_SIGNUP DIALOGEX 0, 0, 201, 162
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "회원 가입"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_SIGNUP_ID,62,33,115,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SIGNUP_PW,62,58,115,13,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SIGNUP_PW2,62,83,115,13,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "회원가입",IDC_BUTTON_SUBMIT,117,116,60,16
+    LTEXT           "아이디",IDC_STATIC,35,34,21,9
+    LTEXT           "비밀번호",IDC_STATIC,30,59,26,9
+    LTEXT           "비밀번호 확인",IDC_STATIC,16,84,40,10
+    GROUPBOX        "정보 입력",IDC_STATIC,7,15,187,95
+END
+
+IDD_FRIENDLISTVIEW DIALOGEX 0, 0, 195, 224
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_CHILD
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_TREE_FRIENDS,"SysTreeView32",TVS_LINESATROOT | WS_HSCROLL | WS_TABSTOP,0,43,195,120
+    EDITTEXT        IDC_EDIT_SEARCH,4,166,166,12,ES_AUTOHSCROLL,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "",IDC_BUTTON_MAIN_SEARCH,173,166,19,12
+    CONTROL         "",IDC_STATIC_IMAGE,"Static",SS_BLACKFRAME,6,2,32,31
+END
+
+IDD_FRIENDADD DIALOGEX 0, 0, 166, 97
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "친구 추가"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "친구 추가",IDC_BUTTON_FRADD_SUBMIT,58,65,43,14
+    EDITTEXT        IDC_EDIT_FRADD_ID,59,38,66,12,ES_AUTOHSCROLL
+    LTEXT           "아이디 :",IDC_STATIC,30,40,25,9
+    GROUPBOX        "친구 정보",IDC_STATIC,19,27,123,32
+END
+
+IDD_MESSAGEBOX DIALOGEX 0, 0, 192, 135
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT_MSG_MESSAGE,7,7,178,96,ES_MULTILINE | WS_VSCROLL
+    PUSHBUTTON      "보내기",IDC_BUTTON_MSG_OK,153,112,32,16
+    PUSHBUTTON      "답장 작성하기",IDC_BUTTON_MSG_RESEND,100,112,43,16
+    PUSHBUTTON      "확인",IDC_BUTTON_MSG_EXIT,153,112,32,16
+END
+
+IDD_CHATBOXVIEW DIALOGEX 0, 0, 197, 195
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT_CHAT_INPUTMSG,7,154,138,26,ES_MULTILINE | ES_AUTOVSCROLL
+    DEFPUSHBUTTON   "보내기",IDC_BUTTON_CHAT_SEND,153,153,37,28
+    EDITTEXT        IDC_EDIT_CHAT_OUTPUTMSG,7,7,183,139,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+END
+
+IDD_STATEMESSAGE DIALOGEX 0, 0, 184, 117
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "대화명 설정"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "대화명 설정",IDC_BUTTON_SUBMIT,52,71,78,16
+    EDITTEXT        IDC_EDIT_STATEMESSAGE,34,43,116,12,ES_AUTOHSCROLL
+END
+
+IDD_FILETRANSFERVIEW DIALOGEX 0, 0, 159, 118
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "파일",IDC_STATIC,15,24,21,8
+    LTEXT           "파일 크기",IDC_STATIC,15,40,30,8
+    LTEXT           "전송 속도",IDC_STATIC,15,55,30,8
+    LTEXT           "진행사항",IDC_STATIC,16,72,30,8
+    EDITTEXT        IDC_EDIT_FILEPATH,57,23,95,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FILESIZE,57,38,95,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TRANSSPEED,57,53,95,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PROGRESS_FILE,"msctls_progress32",WS_BORDER,57,70,95,10
+    PUSHBUTTON      "",IDC_BUTTON_FILEPATH,74,94,37,16
+    PUSHBUTTON      "",IDC_BUTTON_TRANSFERSTART,33,94,37,16
+    PUSHBUTTON      "취소",IDC_BUTTON_FILECANCEL,115,94,37,16
+    EDITTEXT        IDC_EDIT_FILERECEIVEID,57,7,95,12,ES_AUTOHSCROLL
+    LTEXT           "",IDC_STATIC_IDTITLE,14,7,21,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204B0"
+        BEGIN
+            VALUE "CompanyName", "TODO: <회사 이름>"
+            VALUE "FileDescription", "SimpleMessangerClient"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "SimpleMessangerClient.exe"
+            VALUE "LegalCopyright", "TODO: (c) <회사 이름>.  All rights reserved."
+            VALUE "OriginalFilename", "SimpleMessangerClient.exe"
+            VALUE "ProductName", "TODO: <제품 이름>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_SIMPLEMESSANGERCLIENT_FORM, DIALOG
+    BEGIN
+    END
+
+    IDD_SIGNUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_FRIENDLISTVIEW, DIALOG
+    BEGIN
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 221
+        HORZGUIDE, 178
+    END
+
+    IDD_FRIENDADD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 159
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_MESSAGEBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 185
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_CHATBOXVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 190
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 188
+    END
+
+    IDD_STATEMESSAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_FILETRANSFERVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 152
+        VERTGUIDE, 152
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 110
+        HORZGUIDE, 80
+        HORZGUIDE, 94
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_SIMPLEMESSANGERCLIENT_FORM AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SIGNUP AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_FRIENDLISTVIEW AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_FRIENDADD AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_MESSAGEBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_CHATBOXVIEW AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_STATEMESSAGE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_FILETRANSFERVIEW AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE를 초기화할 수 없습니다. OLE 라이브러리 버전이 올바른지 확인하십시오."
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "SimpleMessangerClient\n\nSimpleMessanger\n\n\nSimpleMessangerClient.Document\nSimpleMessangerClient.Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "SimpleMessangerClient"
+    AFX_IDS_IDLEMESSAGE     "준비"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "새 문서를 만듭니다.\n새로 만들기"
+    ID_FILE_OPEN            "기존 문서를 엽니다.\n열기"
+    ID_FILE_CLOSE           "활성 문서를 닫습니다.\n닫기"
+    ID_FILE_SAVE            "활성 문서를 저장합니다.\n저장"
+    ID_FILE_SAVE_AS         "활성 문서를 새 이름으로 저장합니다.\n다른 이름으로 저장"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "프로그램 정보, 버전 번호 및 저작권을 표시합니다.\n정보"
+    ID_APP_EXIT             "문서를 저장할지를 묻고 응용 프로그램을 끝냅니다.\n끝내기"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE2       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE3       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE4       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE5       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE6       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE7       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE8       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE9       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE10      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE11      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE12      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE13      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE14      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE15      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE16      "현재 문서를 엽니다."
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "다음 창으로 전환합니다.\n다음 창"
+    ID_PREV_PANE            "이전 창으로 전환합니다.\n이전 창"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "활성 창을 여러 개의 창으로 분할합니다.\n분할"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "선택 영역을 지웁니다.\n지우기"
+    ID_EDIT_CLEAR_ALL       "모두 지웁니다.\n모두 지우기"
+    ID_EDIT_COPY            "선택 영역을 복사하여 클립보드에 넣습니다.\n복사"
+    ID_EDIT_CUT             "선택 영역을 잘라내어 클립보드에 넣습니다.\n잘라내기"
+    ID_EDIT_FIND            "지정한 텍스트를 찾습니다.\n찾기"
+    ID_EDIT_PASTE           "클립보드 내용을 삽입합니다.\n붙여넣기"
+    ID_EDIT_REPEAT          "마지막 작업을 반복합니다.\n반복"
+    ID_EDIT_REPLACE         "특정 텍스트를 다른 텍스트로 바꿉니다.\n바꾸기"
+    ID_EDIT_SELECT_ALL      "전체 문서를 선택합니다.\n모두 선택"
+    ID_EDIT_UNDO            "마지막 작업 실행을 취소합니다.\n실행 취소"
+    ID_EDIT_REDO            "이전에 실행 취소된 작업을 다시 실행합니다.\n다시 실행"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "도구 모음을 표시하거나 숨깁니다.\n도구 모음 설정/해제"
+    ID_VIEW_STATUS_BAR      "상태 표시줄을 표시하거나 숨깁니다.\n상태 표시줄 설정/해제"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "창 크기를 변경합니다."
+    AFX_IDS_SCMOVE          "창 위치를 변경합니다."
+    AFX_IDS_SCMINIMIZE      "창을 아이콘으로 축소합니다."
+    AFX_IDS_SCMAXIMIZE      "창을 전체 화면 크기로 확대합니다."
+    AFX_IDS_SCNEXTWINDOW    "다음 문서 창으로 전환합니다."
+    AFX_IDS_SCPREVWINDOW    "이전 문서 창으로 전환합니다."
+    AFX_IDS_SCCLOSE         "문서를 저장할 것인지 확인하고 활성 창을 닫습니다."
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "창을 보통 크기로 복원합니다."
+    AFX_IDS_SCTASKLIST      "작업 목록을 활성화합니다."
+END
+
+#endif    // 한국어(대한민국) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#include "res\SimpleMessangerClient.rc2"  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.
+#include "l.KOR\afxres.rc"      // 표준 구성 요소
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
